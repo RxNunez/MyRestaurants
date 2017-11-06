@@ -9,11 +9,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:scaleType="centerCrop"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        android:scaleType="fitCenter"
         android:src="@drawable/background" />
 
     <TextView
@@ -23,27 +21,40 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:text="MyRestaurants"
-        android:textColor="@color/colorAccent"
-        android:textSize="55sp"
+        android:text="FeedMe"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="60sp"
         android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Find Restaurants"
-        android:id="@+id/findRestaurantsButton"
+        android:text="Find Foodtrucks"
+        android:id="@+id/findFoodtrucksButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"
         android:textColor="@color/colorTextIcons"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginBottom="10dp" />
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="My Saved Foodtrucks"-->
+        <!--android:id="@+id/savedFoodtrucksButton"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:textColor="@color/colorTextIcons"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"/>-->
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/locationEditText"
         android:background="@color/colorTextIcons"
-        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_above="@+id/findFoodtrucksButton"
         android:layout_marginBottom="10dp"
         android:padding="5dp"
         android:hint="Enter Zip Code"

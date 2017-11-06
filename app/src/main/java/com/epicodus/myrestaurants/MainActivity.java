@@ -15,7 +15,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    @Bind(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
+    @Bind(R.id.findFoodtrucksButton) Button mFindFoodtrucksButton;
     @Bind(R.id.locationEditText) EditText mLocationEditText;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
 
@@ -25,17 +25,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface ostrichFont = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
-        mAppNameTextView.setTypeface(ostrichFont);
+        Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        mAppNameTextView.setTypeface(pacificoFont);
 
-        mFindRestaurantsButton.setOnClickListener(this);
+        mFindFoodtrucksButton.setOnClickListener(this);
     }
 
             @Override
             public void onClick(View v) {
-                if(v == mFindRestaurantsButton) {
+                if(v == mFindFoodtrucksButton) {
                     String location = mLocationEditText.getText().toString();
-                    Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+                    Intent intent = new Intent(MainActivity.this, FoodtrucksActivity.class);
                     intent.putExtra("location", location);
                     startActivity(intent);
                 }

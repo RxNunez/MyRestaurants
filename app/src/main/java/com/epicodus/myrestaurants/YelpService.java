@@ -16,7 +16,7 @@ import okhttp3.Response;
 
 public class YelpService {
 
-    public static void findRestaurants(String location, Callback callback) {
+    public static void findFoodtrucks(String location, Callback callback) {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();
@@ -35,8 +35,8 @@ public class YelpService {
 
     }
 
-    public ArrayList<Restaurant> processResults(Response response) {
-        ArrayList<Restaurant> restaurants = new ArrayList<>();
+    public ArrayList<Foodtruck> processResults(Response response) {
+        ArrayList<Foodtruck> foodtrucks = new ArrayList<>();
 
         try {
             String jsonData = response.body().string();
@@ -68,9 +68,9 @@ public class YelpService {
                 for (int y = 0; y < categoriesJSON.length(); y++) {
                     categories.add(categoriesJSON.getJSONObject(y).getString("title"));
                 }
-                Restaurant restaurant = new Restaurant(name, phone, website, rating,
+                Foodtruck foodtruck = new Foodtruck(name, phone, website, rating,
                         imageUrl, address, latitude, longitude, categories);
-                restaurants.add(restaurant);
+                foodtrucks.add(foodtruck);
             }
         }
         catch (IOException e){
@@ -79,7 +79,7 @@ public class YelpService {
         catch (JSONException e){
             e.printStackTrace();
         }
-        return restaurants;
+        return foodtrucks;
     }
 
 }

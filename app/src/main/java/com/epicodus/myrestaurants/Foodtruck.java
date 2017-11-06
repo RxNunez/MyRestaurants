@@ -3,7 +3,7 @@ package com.epicodus.myrestaurants;
 
 import java.util.ArrayList;
 
-public class Restaurant {
+public class Foodtruck {
     private String name;
     private String phone;
     private String website;
@@ -14,7 +14,7 @@ public class Restaurant {
     private double longitude;
     private ArrayList<String> categories = new ArrayList<>();
 
-    public Restaurant(String name, String phone, String website,
+    public Foodtruck(String name, String phone, String website,
                       double rating, String imageUrl, ArrayList<String> address,
                       double latitude, double longitude, ArrayList<String> categories) {
         this.name = name;

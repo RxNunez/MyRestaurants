@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.epicodus.myrestaurants.RestaurantsActivity">
+    tools:context="com.epicodus.myrestaurants.FoodtrucksActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here are all the restaurants near"
+        android:text="Here are all the foodtrucks near"
         android:id="@+id/locationTextView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
